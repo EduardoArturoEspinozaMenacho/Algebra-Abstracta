@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int fuction(int a, int n){
+   int q=a/n;
+   int r;
+   if (a<0){
+     q=q-1;
+   }
+   return r=a-(q*n);
+   }
+int main(){
+  int x,y;
+  cin>>x;
+  cin>>y;
+ cout<<fuction(x,y);
+}
