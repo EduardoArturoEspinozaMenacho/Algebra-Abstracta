@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+char mitad(string a){
+  string primero;
+  string segundo;
+  int indice=0;
+  string asteriscos="******";
+  cout<<a.length()<<"\n";
+  while(indice!=a.length()/2){
+    primero=primero+a[indice];
+    indice++;}
+  while(indice!=a.length()){
+    segundo=segundo+a[indice];
+    indice++;}
+    a=primero+asteriscos+segundo;
+    cout<<a;
+  return 0;
+}
+int main() {
+  string mensaje;
+  cout<<"Ingrese la palabra\n";
+ cin>>mensaje;
+ mitad(mensaje);
+}
