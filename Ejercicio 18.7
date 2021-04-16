@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int rot13(string c);
+int main() {
+  string c;
+  cout<<"Ingrese el mensaje"<<"\n";
+  cin>>c;
+  rot13(c);
+
+}
+int rot13(string c){
+ string a="abcdefghijklm";
+ string b="nopqrstuvwxyz";
+ string v;
+  for(int i=0;i<c.length();i++){
+  for(int j=0;j<=13;j++){
+    if(c[i]==a[j]){
+      v=c[i];
+      c[i]=b[j];
+    }
+    if(v[0]==b[j]){
+      v=c[i];
+      c[i]=a[j];
+    } 
+    }
+  }
+  cout<<c;
+  
+return 0;}
