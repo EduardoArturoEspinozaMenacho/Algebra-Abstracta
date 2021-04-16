@@ -1,0 +1,25 @@
+#include <iostream>
+#include<string>
+using namespace std;
+void d_c();
+int main() {
+  d_c();
+}
+void d_c(){
+string mensaje;
+int letra;
+int bloques;
+cout<<"Ingrese por teclado una cadena de caracteres:\n";
+cin>>mensaje;
+cout<<"Ingrese por teclado el número de caracteres que tendrá cada bloque: \n";
+cin>>letra;
+bloques=mensaje.length()/letra;
+for(int i=0;i<bloques;i++){
+  for(int j=0;j<letra;j++){
+    cout<<mensaje[i];
+    
+  }
+  cout<<"\n";
+  }
+  
+}
