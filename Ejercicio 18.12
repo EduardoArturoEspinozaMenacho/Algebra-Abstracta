@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+int ahorcados(){
+string oculta="ahorcados";
+string clave="xxxxxxxxx";
+string respuestas="___";
+string letra;
+string decision;
+int indice=0;
+char derecha_b=92,derecha_p=92,izquierda_b=47,izquierda_p=47,torso1=124,torso2=124,cabeza=79;
+int vidas=3;
+while(vidas!=0){
+  if(indice==9){
+  cout<<"Felicidades!!! Adivino mi palabra. Desea jugar otra vez? si/no\n";
+  vidas=4;
+  cin>>decision;
+  while(vidas==4){
+  if(decision=="si"){
+    vidas=3;
+    clave="xxxxxxxxx";
+    indice=0;
+  }
+  else if(decision=="no"){
+   break;
+  }
+  else{
+    cout<<"Palabra incorrecta elija otra\n";
+  }
+  }}
+  cout<<"  "<<cabeza<<"   "<<"\n";
+  cout<<" "<<izquierda_b<<torso1<<derecha_b<<"      "<<clave<<"\n";
+  cout<<"  "<<torso2<<"         "<<respuestas<<"\n";
+  cout<<" "<<izquierda_p<<" "<<derecha_p<<"\n";
+  cout<<"            VIDAS:"<<vidas<<"\n";
+  cout<<"Ingrese la letra:";
+  cin>>letra;
+  if(letra[0]==oculta[indice]){
+    clave[indice]=letra[0];
+    indice++;
+  }
+  else{
+   cout<<"Incorrecto elija otra letra\n";
+   vidas--;
+  }
+  system("clear");}
+  
+  cout<<"Usted perdio";
+
+return 0;}
+
+int main() {
+  ahorcados();
+
+}
