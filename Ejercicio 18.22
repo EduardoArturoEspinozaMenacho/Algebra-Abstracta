@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+char al_revez(string a){
+  int secuencia=-1;
+  string respuesta;
+for(int indice=0;indice<a.length();indice++){
+  respuesta=respuesta+a[a.length()+secuencia];
+  secuencia--;
+}
+cout<<respuesta;
+return 0;
+}
+int main() {
+  string mensaje;
+  cout<<"Ingrese el mensaje\n";
+  cin>>mensaje;
+  al_revez(mensaje);
+}
